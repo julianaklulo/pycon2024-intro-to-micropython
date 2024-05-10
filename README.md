@@ -33,14 +33,14 @@ Use the template files available in the folder [battleship-single-player](battle
 * [Template 2](battleship-single-player/template_2.py): Fill the `shoot`method in class `Player`
 * [Template 3](battleship-single-player/template_3.py): Complete the class `Game`
 
-The final code for the single-player version of the game is available in the file [single-player-complete.py](battleship-single-player/single-player-complete.py).
+The final code for the single-player version of the game is available in the file [single-player-complete.py](battleship-single-player/single_player_complete.py).
 
 ### Multi-player Battleship
 Use the template files available in the folder [battleship-multiplayer](battleship-multiplayer) to fill the gaps during the tutorial.
 
-* [Template 1](battleship-multiplayer/multiplayer-template-1.py): Complete the multiplayer aspects of the class `Game`
+* [Template 1](battleship-multiplayer/template_1.py): Complete the multiplayer aspects of the class `Game`
 
-The final code for the multi-player version of the game is available in the file [multiplayer-complete.py](battleship-multiplayer/multiplayer-complete.py).
+The final code for the multi-player version of the game is available in the file [multiplayer-complete.py](battleship-multiplayer/multiplayer_complete.py).
 
 ### Slides
 The slides for this tutorial are available in the file [slides.pdf](slides.pdf).

@@ -8,7 +8,7 @@ PLAYER = 7
 SHIP = 9
 WATER = 2
 THRESHOLD = 400
-GROUP = 23
+GROUP = 0 # Define a group number
 
 
 class Sea:
@@ -178,6 +178,8 @@ class Player:
 
             self.blink(self.row, self.col)
 
+        sleep(100)
+
     def mark(self, row, col, hit):
         """
         Mark the player board with result of a shot.
@@ -253,7 +255,17 @@ class Game:
             display.show(Image.SAD)
             music.play(music.WAWAWAWAA)
 
-        sleep(2000)
+    def lost(self):
+        """
+        Check if the player has lost the game.
+
+        The player loses the game if the opponent hits all the ships.
+        """
+        for i in range(5):
+            for j in range(5):
+                if self.sea.board[i][j] == SHIP and self.opponent.shots[i][j] != SHIP:
+                    return False
+        return True
 
     def choose_players(self):
         """
@@ -292,18 +304,6 @@ class Game:
         """
         # WRITE THE LOGIC HERE
         pass
-
-    def lost(self):
-        """
-        Check if the player has lost the game.
-
-        The player loses the game if the opponent hits all the ships.
-        """
-        for i in range(5):
-            for j in range(5):
-                if self.sea.board[i][j] == SHIP and self.opponent.shots[i][j] != SHIP:
-                    return False
-        return True
 
     def run(self):
         """

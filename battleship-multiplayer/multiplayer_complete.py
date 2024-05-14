@@ -8,7 +8,7 @@ PLAYER = 7
 SHIP = 9
 WATER = 2
 THRESHOLD = 400
-GROUP = 23
+GROUP = 0  # Define a group number
 
 
 class Sea:
@@ -241,6 +241,32 @@ class Game:
         music.play(music.JUMP_UP)
         display.clear()
 
+    def end(self, win):
+        """
+        Routine to end the game.
+
+        If the player wins, show a happy face.
+        If the player loses, show a sad face.
+        """
+        if win:
+            display.show(Image.HAPPY)
+            music.play(music.CHASE)
+        else:
+            display.show(Image.SAD)
+            music.play(music.WAWAWAWAA)
+
+    def lost(self):
+        """
+        Check if the player has lost the game.
+
+        The player loses the game if the opponent hits all the ships.
+        """
+        for i in range(5):
+            for j in range(5):
+                if self.sea.board[i][j] == SHIP and self.opponent.shots[i][j] != SHIP:
+                    return False
+        return True
+
     def choose_players(self):
         """
         Routine to choose the players.
@@ -276,32 +302,6 @@ class Game:
                 break
 
         sleep(1000)
-
-    def end(self, win):
-        """
-        Routine to end the game.
-
-        If the player wins, show a happy face.
-        If the player loses, show a sad face.
-        """
-        if win:
-            display.show(Image.HAPPY)
-            music.play(music.CHASE)
-        else:
-            display.show(Image.SAD)
-            music.play(music.WAWAWAWAA)
-
-    def lost(self):
-        """
-        Check if the player has lost the game.
-
-        The player loses the game if the opponent hits all the ships.
-        """
-        for i in range(5):
-            for j in range(5):
-                if self.sea.board[i][j] == SHIP and self.opponent.shots[i][j] != SHIP:
-                    return False
-        return True
 
     def send_shot(self):
         """

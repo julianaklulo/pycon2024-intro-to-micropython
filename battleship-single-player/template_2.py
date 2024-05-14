@@ -68,7 +68,6 @@ class Player:
 player = Player()
 
 while True:
-    hit = random.choice([True, False])
     player.shoot()
-    player.mark(player.row, player.col, hit)
+    player.mark(player.row, player.col, True)
     player.show()

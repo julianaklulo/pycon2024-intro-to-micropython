@@ -244,4 +244,6 @@ class Game:
 
 
 game = Game()
-game.run()
+# game.start()
+# game.end()
+# game.run()

@@ -84,7 +84,7 @@ music.play(
 speech.say("Hello, PyCon!")
 
 # Play expressive sounds
-audio.play(sound.YAWN)
+audio.play(Sound.YAWN)
 
 
 # ***** Michophone *****

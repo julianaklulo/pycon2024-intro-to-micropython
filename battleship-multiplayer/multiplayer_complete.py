@@ -178,6 +178,8 @@ class Player:
 
             self.blink(self.row, self.col)
 
+        sleep(100)
+
     def mark(self, row, col, hit):
         """
         Mark the player board with result of a shot.
@@ -315,6 +317,7 @@ class Game:
 
         message = str(self.me.row) + " " + str(self.me.col)
         radio.send(message)
+        sleep(100)
 
         response = None
         while not response:
@@ -334,6 +337,7 @@ class Game:
             display.show(Image.NO)
             music.play(music.POWER_DOWN)
 
+        sleep(100)
         return won
 
     def receive_shot(self):
@@ -365,6 +369,7 @@ class Game:
 
         message = str(hit) + " " + str(lost)
         radio.send(message)
+        sleep(100)
 
         if hit:
             display.show(Image.TARGET)
@@ -373,6 +378,7 @@ class Game:
             display.show(Image.NO)
             music.play(music.POWER_UP)
 
+        sleep(100)
         return lost
 
     def run(self):

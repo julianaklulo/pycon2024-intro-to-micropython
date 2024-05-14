@@ -1,19 +1,15 @@
 """
-Exercise 4: Teleporting duck.
+Example 4: Teleporting duck.
 
 Create a teleporting duck:
 - Choose a partner and define a radio group
 - Send “duck” when the device is shaken
 - Display a duck when “duck” is received
-
-Tip: clear the display before sending the duck
 """
-
 from microbit import *
 import radio
 
-
-GROUP = 23
+GROUP = 0  # Define a group number
 
 radio.on()
 radio.config(group=GROUP)

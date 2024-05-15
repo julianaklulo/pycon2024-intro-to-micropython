@@ -18,10 +18,8 @@ This repository contains all the code avaiable in the slides, as well as the cod
 ## Cheat Sheet
 The file [cheat_sheet.py](cheat_sheet.py) has code examples for all the components we'll use in the tutorial.
 
-## Exercises
-The answers to the exercises are available in the folder [exercises](exercises).
-
-**I trust you to try to solve the exercises on your own before checking the answers. If you have any questions, feel free to ask me during the tutorial.**
+## Examples
+During the tutorial we'll be going over some interactive examples that are available in the [examples](examples) folder. Feel free to run them on the micro:bit to see how they work and change it to see the effects.
 
 ## Projects
 The tutorial has two projects: a single-player version and a multiplayer version of the Battleship game.

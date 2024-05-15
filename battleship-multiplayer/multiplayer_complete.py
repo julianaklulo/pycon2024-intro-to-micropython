@@ -278,6 +278,7 @@ class Game:
 
         while True:
             if button_a.is_pressed():
+                display.show(Image.ARROW_W)
                 radio.send("PLAYER_1 READY")
                 while True:
                     message = radio.receive()
@@ -290,6 +291,7 @@ class Game:
                 break
 
             if button_b.is_pressed():
+                display.show(Image.ARROW_E)
                 while True:
                     message = radio.receive()
                     sleep(100)

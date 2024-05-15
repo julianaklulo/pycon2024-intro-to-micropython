@@ -8,7 +8,7 @@ PLAYER = 7
 SHIP = 9
 WATER = 2
 THRESHOLD = 400
-GROUP = 0 # Define a group number
+GROUP = 0  # Define a group number
 
 
 class Sea:

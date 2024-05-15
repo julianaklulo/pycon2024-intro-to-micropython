@@ -1,27 +1,21 @@
 """
-Example 2: Move the pixel.
+Example 3: Accelerometer gestures.
 
-Display a pixel at coordinate (2, 2) and make it move based on
-the accelerometer values:
-- Read x and y axis
-- Increase or decrease the coordinates based on the the values read
-- Show the pixel at the new coordinates
+Show an arrow pointing to the direction of the accelerometer gesture.
 """
 from microbit import *
 
-x, y = 2, 2
-
 while True:
-    if accelerometer.get_x() > 0:
-        x = min(x + 1, 4)
-    else:
-        x = max(x - 1, 0)
-    if accelerometer.get_y() > 0:
-        y = min(y + 1, 4)
-    else:
-        y = max(y - 1, 0)
+    gesture = accelerometer.current_gesture()
 
-    display.set_pixel(x, y, 9)
+    if gesture == "up":
+        display.show(Image.ARROW_N)
+    elif gesture == "down":
+        display.show(Image.ARROW_S)
+    elif gesture == "left":
+        display.show(Image.ARROW_W)
+    elif gesture == "right":
+        display.show(Image.ARROW_E)
 
     sleep(100)
-    display.set_pixel(x, y, 0)
+    display.clear()

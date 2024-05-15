@@ -13,7 +13,15 @@ from microbit import *
 display.show(Image.HEART)
 
 # Display custom image
-display.show(Image("00990:" "00900:" "00900:" "99999:" "09990"))
+display.show(
+    Image(
+        "00000:"
+        "33333:"
+        "55555:"
+        "77777:"
+        "99999"
+    )
+)
 
 # Scroll text
 display.scroll("PyCon US")
@@ -61,22 +69,8 @@ music.play(music.POWER_UP)
 # Create your own music - Format: '{note}{octave}:{duration}'
 music.play(
     [
-        "G4:2",
-        "A4:2",
-        "B4:4",
-        "D5:4",
-        "D5:4",
-        "B4:4",
-        "C5:4",
-        "C5:4",
-        "r:2",
-        "G4:2",
-        "A4:2",
-        "B4:4",
-        "D5:4",
-        "D5:4",
-        "C5:4",
-        "B4:8",
+        "C4:2", "D4:2", "E4:2", "F4:2",
+        "G4:2", "A4:2", "B4:2",
     ]
 )
 

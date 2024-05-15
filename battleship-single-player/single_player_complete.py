@@ -164,6 +164,8 @@ class Player:
 
             self.blink(self.row, self.col)
 
+        sleep(100)
+
     def mark(self, row, col, hit):
         """
         Mark the player board with the result of the shot.

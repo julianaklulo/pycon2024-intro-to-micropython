@@ -1,5 +1,5 @@
 """
-Example 1: Buttons and images.
+Example 1: Buttons and display.
 
 Show an image based on the button pressed:
 - If button_a is pressed, show a happy face

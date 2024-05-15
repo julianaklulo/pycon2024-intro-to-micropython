@@ -1,23 +1,27 @@
 """
-Example 4: Teleporting duck.
+Example 4: Accelerometer values.
 
-Create a teleporting duck:
-- Choose a partner and define a radio group
-- Send “duck” when the device is shaken
-- Display a duck when “duck” is received
+Display a pixel at coordinate (2, 2) and make it move based on
+the accelerometer values:
+- Read x and y axis
+- Increase or decrease the coordinates based on the the values read
+- Show the pixel at the new coordinates
 """
 from microbit import *
-import radio
 
-GROUP = 0  # Define a group number
-
-radio.on()
-radio.config(group=GROUP)
+x, y = 2, 2
 
 while True:
-    if accelerometer.was_gesture("shake"):
-        display.clear()
-        radio.send("duck")
-    if radio.receive() == "duck":
-        display.show(Image.DUCK)
+    if accelerometer.get_x() > 0:
+        x = min(x + 1, 4)
+    else:
+        x = max(x - 1, 0)
+    if accelerometer.get_y() > 0:
+        y = min(y + 1, 4)
+    else:
+        y = max(y - 1, 0)
+
+    display.set_pixel(x, y, 9)
+
     sleep(100)
+    display.set_pixel(x, y, 0)

@@ -25,6 +25,10 @@ During the tutorial we'll be going over some interactive examples that are avail
 The tutorial has two projects: a single-player version and a multiplayer version of the Battleship game.
 
 ### Single-player Battleship
+
+#### Demonstration of the single-player version of Battleship:
+https://github.com/julianaklulo/pycon2024-intro-to-micropython/assets/8601883/20bb5daa-c07c-4984-9af6-d1efcea982bb
+
 Use the template files available in the folder [battleship-single-player](battleship-single-player) to fill the gaps during the tutorial.
 
 * [Template 1](battleship-single-player/template_1.py): Study the class `Ship`
@@ -34,6 +38,9 @@ Use the template files available in the folder [battleship-single-player](battle
 The final code for the single-player version of the game is available in the file [single-player-complete.py](battleship-single-player/single_player_complete.py).
 
 ### Multi-player Battleship
+#### Demonstration of the multiplayer version of Battleship:
+https://github.com/julianaklulo/pycon2024-intro-to-micropython/assets/8601883/1f4caaaf-f8ae-4f25-89fe-9b336b2e8604
+
 Use the template files available in the folder [battleship-multiplayer](battleship-multiplayer) to fill the gaps during the tutorial.
 
 * [Template 1](battleship-multiplayer/template_1.py): Complete the multiplayer aspects of the class `Game`
